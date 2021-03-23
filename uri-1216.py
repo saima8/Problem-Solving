@@ -1,16 +1,15 @@
-
+count=0
+sum=0
 while (1):
-    count=0
-    sum=0
-    name = input()
-    dis = int(input()) 
-    try:    
-        
+  
+    try: 
+        name = input()
+        dis = input()
+
         count+=1
-        sum+=dis
-        
-                 
-    except ValueError:
+        sum+=int(dis)
+    except EOFError:
         break
+
 avg = float(sum/count)
-print(avg)
+print("{:.1f}".format(avg))
